@@ -1,0 +1,6 @@
+{
+	"files.associations": {
+		"utsname.h": "c",
+		"tty.h": "c"
+	}
+}
