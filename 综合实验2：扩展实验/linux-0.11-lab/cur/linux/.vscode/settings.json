@@ -1,8 +1,20 @@
 {
-	"files.associations": {
-		"blk.h": "c",
-		"tty.h": "c",
-		"termios.h": "c",
-		"ne2k.h": "c"
-	}
+    "files.associations": {
+        "types.h": "c",
+        "utsname.h": "c",
+        "cstdlib": "c",
+        "fs.h": "c",
+        "head.h": "c",
+        "ne2k.h": "c",
+        "segment.h": "c",
+        "sched.h": "c",
+        "kernel.h": "c",
+        "system.h": "c",
+        "fdreg.h": "c",
+        "tty.h": "c",
+        "signal.h": "c",
+        "sys.h": "c",
+        "stdio.h": "c",
+        "stdlib.h": "c"
+    }
 }

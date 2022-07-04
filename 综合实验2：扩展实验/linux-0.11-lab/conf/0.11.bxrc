@@ -22,8 +22,7 @@ error: action=report
 info: action=report
 debug: action=ignore
 
-pci: enabled=1, chipset=i440fx, slot2=ne2k
-ne2k:ioaddr=0x300, irq=10, mac=00:0c:29:4d:d0:35, ethmod=tuntap, ethdev=/dev/net/tun,script=/path/tunconfig
+pci: enabled=1, chipset=i440fx
 vga: extension=vbe, update_freq=15
 keyboard: serial_delay=250, paste_delay=100000
 cpu: ips=15000000

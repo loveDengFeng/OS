@@ -36,8 +36,6 @@ __always_inline _syscall0(int,sync)
 #include <stdarg.h>
 #include <fcntl.h>
 #include <sys/types.h>
-#include <linux/ne2k.h>
-
 
 #include <linux/fs.h>
 
@@ -54,17 +52,12 @@ extern long rd_init(long mem_start, int length);
 extern long kernel_mktime(struct tm * tm);
 extern long startup_time;
 
-
 /*
  * This is set up by the setup-routine at boot-time
  */
 #define EXT_MEM_K (*(unsigned short *)0x90002)
 #define DRIVE_INFO (*(struct drive_info *)0x90080)
 #define ORIG_ROOT_DEV (*(unsigned short *)0x901FC)
-
-
-#define NE_DATAPORT 0x10
-#define NE_IOBASE 0xc020 
 
 /*
  * Yeah, yeah, it's ugly, but I cannot find how to do this correctly
@@ -141,18 +134,6 @@ void main(void)		/* This really IS void, no error here. */
 	buffer_init(buffer_memory_end);
 	hd_init();
 	floppy_init();
-	int j;
-	int prom[6];
-	for(j=0;j<13;j++){
-		int tmp=inb(NE_IOBASE+NE_DATAPORT);
-		if(j&1){
-			prom[(j-1)/2]=tmp;
-			printk("%x : ",tmp);
-		}
-	}
-	printk("\n");
-	//get_mac_address();
-
 	sti();
 	move_to_user_mode();
 	if (!fork()) {		/* we count on this going ok */

@@ -56,4 +56,3 @@ ll_rw_blk.s ll_rw_blk.o : ll_rw_blk.c ../../include/errno.h ../../include/linux/
   ../../include/linux/head.h ../../include/linux/fs.h \
   ../../include/sys/types.h ../../include/linux/mm.h ../../include/signal.h \
   ../../include/linux/kernel.h ../../include/asm/system.h blk.h 
-

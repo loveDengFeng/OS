@@ -163,4 +163,3 @@ void blk_dev_init(void)
 		request[i].next = NULL;
 	}
 }
-
